@@ -1,0 +1,14 @@
+Algoritmo Ejercicio2
+	definir num Como Entero
+	Escribir "Ingrese un numero"
+	leer num
+
+	Escribir calculoPar(num)
+FinAlgoritmo
+
+Funcion parImpar = calculoPar(x)
+	definir parImpar como logico
+	parImpar = x%2 <> 0
+FinFuncion
+
+

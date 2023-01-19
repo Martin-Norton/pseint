@@ -1,0 +1,31 @@
+//Realizar un programa que lea 10 números reales por teclado, los almacene en un arreglo y
+//muestre por pantalla la suma, resta y multiplicación de todos los números ingresados al
+//arreglo.
+
+Algoritmo vectores
+	Dimension vector[10]
+	Definir vector, suma, resta, multip Como real
+	Definir i como entero
+	suma=0
+	resta=0
+	multip=1
+	Leer vector[0]
+	Leer vector[1]
+	Leer vector[2]
+	Leer vector[3]
+	Leer vector[4]
+	Leer vector[5]
+	Leer vector[6]
+	Leer vector[7]
+	Leer vector[8]
+	Leer vector[9]
+	Para i<- 0 Hasta 9 Hacer
+		suma=suma + vector[i]
+		resta=resta - vector[i]
+		multip=multip * vector[i]
+	FinPara
+	Escribir suma
+	Escribir resta
+	Escribir multip
+FinAlgoritmo
+

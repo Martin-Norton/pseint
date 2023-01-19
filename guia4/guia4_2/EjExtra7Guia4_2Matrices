@@ -1,0 +1,83 @@
+Algoritmo sin_titulo
+	definir i,j, suma, ventaMayor, maximo Como Entero
+	definir matriz  Como Caracter
+	i=0
+	j=0
+	suma = 0
+	
+	dimension matriz(8,7)
+	
+	matriz(0,0) = "      "
+	matriz(0,1) = "Lunes"
+	matriz(0,2) = "Martes"
+	matriz(0,3) = "Miercoles"
+	matriz(0,4) = "Jueves"
+	matriz(0,5) = "Viernes"
+	matriz(0,6) = "Total Producto"
+	matriz(1,0) = "Producto 1"
+	matriz(2,0) = "Producto 2"
+	matriz(3,0) = "Producto 3"
+	matriz(4,0) = "Producto 4"
+	matriz(5,0) = "Producto 5"
+	matriz(6,0) = "Total semana"
+	matriz(7,0) = "Producto mas vendido"
+	
+	//llenado de lunes a viernes y Total Producto
+	para i <- 1 hasta 5  con paso 1 Hacer
+		suma = 0
+		para j <- 1 hasta 5 con paso 1 Hacer
+			matriz(i,j)= ConvertirATexto(aleatorio(1,100))
+			suma = suma + ConvertirANumero(matriz(i,j))
+		FinPara
+		
+		matriz(i,6) = ConvertirATexto(suma)
+	FinPara
+	
+	//total de ventas cada dia semana
+	
+	para j <- 1 hasta 5  con paso 1 Hacer
+		suma=0
+		para i <- 1 hasta 5 con paso 1 Hacer
+			suma = suma + ConvertirANumero(matriz(i,j))
+		FinPara
+		
+		matriz(6,j) = ConvertirATexto(suma)
+	FinPara
+	
+	//Total Semana + Total de producto
+	suma = 0
+	para i <- 6 hasta 6  con paso 1 Hacer
+		
+		para j <- 1 hasta 5 con paso 1 Hacer
+			suma = suma + ConvertirANumero(matriz(i,j))
+		FinPara
+		
+		matriz(i,6) = ConvertirATexto(suma)
+	FinPara
+	
+	//producto mas vendido por dia
+	suma = 0
+	para j <- 1 hasta 5  con paso 1 Hacer
+		maximo = 0
+		para i <- 1 hasta 5 con paso 1 Hacer
+			ventaMayor = ConvertirANumero(matriz(i,j))
+			si ventaMayor > maximo entonces
+				maximo = ventaMayor
+				matriz(7,j) = matriz(i,0)
+			FinSi
+		FinPara
+		
+		suma = suma + maximo
+		
+	FinPara
+	// total de los productos mas vendidos
+	matriz(7,6) = ConvertirATexto(suma)
+	
+	// Mostrar la tabla
+	para i <- 0 hasta 7 con paso 1 Hacer
+		para j <- 0 hasta 6 con paso 1 Hacer
+			escribir sin saltar" " matriz(i,j) " "
+		FinPara
+		escribir " "
+	FinPara
+FinAlgoritmo

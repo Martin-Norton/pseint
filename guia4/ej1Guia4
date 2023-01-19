@@ -1,0 +1,16 @@
+//Realizar un programa que rellene un vector con 5 valores ingresados por el usuario y los
+//muestre por pantalla.
+
+Algoritmo vectores
+	Dimension vector[5]
+	Definir vector, i Como Entero
+	Leer vector[0]
+	Leer vector[1]
+	Leer vector[2]
+	Leer vector[3]
+	Leer vector[4]
+	Para i<- 0 Hasta 4 Hacer
+		escribir vector[i]
+	FinPara
+FinAlgoritmo
+

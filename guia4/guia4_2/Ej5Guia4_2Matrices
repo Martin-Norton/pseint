@@ -1,0 +1,46 @@
+
+
+Algoritmo Ej5Guia4_2Matrices
+	
+	Definir M,N,i,j Como entero
+	Definir matriz,frase Como Caracter
+	
+	M = 3
+	N = 3
+	
+	Dimension matriz(M,N)
+	
+	Escribir "Digite una frase de nueve letras : "
+	Leer frase
+	
+	Para i=0 Hasta M-1
+		para j = 0 Hasta N-1
+			matriz(i,j) = subcadena(frase,j,j)
+		FinPara
+	FinPara
+	Para i=1 Hasta M-1
+		para j = 0 Hasta N-1
+			matriz(i,j) = subcadena(frase,j+3,j+3)
+		FinPara
+	FinPara
+	
+    Para i=2 Hasta M-1
+	  para j = 0 Hasta N-1
+		matriz(i,j) = subcadena(frase,j+6,j+6)
+	  FinPara
+    FinPara
+	imprimeMatriz(matriz,M,N)
+	
+FinAlgoritmo
+
+SubProceso imprimeMatriz(matriz,M,N)
+	Definir i,j Como Entero
+	
+	Para i=0 hasta M-1
+		Para j=0 Hasta N-1
+			Escribir matriz(i,j)," " Sin Saltar
+		FinPara
+		Escribir ""
+	FinPara
+	
+FinSubProceso

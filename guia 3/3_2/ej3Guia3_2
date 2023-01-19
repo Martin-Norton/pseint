@@ -1,0 +1,18 @@
+Algoritmo sin_titulo
+	Definir n1, n2,coc Como Entero
+	coc = 0
+	Escribir "Ingrese un numero"
+	Leer n1
+	Escribir "Ingrese numero"
+	Leer n2
+	resto(n1, n2, coc)
+	Escribir "Residuo " n1 " Cociente " coc
+FinAlgoritmo
+
+SubProceso resto(x por referencia ,z, coc por referencia)
+	Repetir 
+		x=x-z
+		coc=coc+1
+	Hasta Que  z >x 
+FinSubProceso
+	

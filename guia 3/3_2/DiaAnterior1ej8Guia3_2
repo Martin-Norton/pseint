@@ -1,0 +1,51 @@
+Algoritmo DiaAnterior1
+	
+//	Realice un algoritmo que solicite al usuario una fecha y muestre por pantalla la fecha anterior.
+//	Para ello se deberá utilizar un procedimiento llamado diaAnterior que reciba una fecha
+//	representada a través de tres enteros dia, mes y anio, y retorne la fecha anterior. Puede
+//	asumir que dia, mes y anio representan una fecha válida. Realice pruebas de escritorio para
+//	los valores dia=5, mes=10, anio=2012 y para dia=1, mes=3, anio=2004.
+	
+	Definir dia, mes, anio Como Entero
+	
+	Escribir "Ingrese dia, mes y anio: "
+	leer dia
+	Leer mes
+	Leer anio
+	
+	diaAnterior(dia, mes, anio)
+	
+	
+	
+FinAlgoritmo
+
+SubProceso diaAnterior(dia, mes, anio Por valor)
+	
+	Si dia >= 2 Y dia <= 31
+		dia = dia - 1
+	FinSi
+	
+	Si dia = 1 Entonces
+		Segun mes Hacer
+			2,4,6,8,9,11:
+				dia = 31
+				mes = mes - 1
+			1:
+				anio = anio - 1
+				mes = 12
+				dia = 31
+				
+			3:
+				dia = 28
+				mes = 2
+			5,7,10,12:
+					dia = 30
+					mes = mes - 1
+		Fin Segun
+	FinSi
+		
+	Escribir dia "/", mes "/", anio
+	
+	
+FinSubProceso
+	

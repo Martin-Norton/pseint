@@ -1,0 +1,58 @@
+Algoritmo Ej2Guia4Matrices
+	
+	Definir M,N,i,j,contador Como Entero
+	
+	M = 5
+	N = 5
+	contador = 0
+	
+	Definir original,num Como Real
+	Dimension original(M,N)
+	
+	para i=0 Hasta M-1
+		
+		para j=0 Hasta N-1
+			
+			original(i,j) = Aleatorio(1,10)
+			
+		FinPara
+	FinPara
+	
+	Escribir "Defina el valor numerico a buscar"
+	Leer num
+	
+	Para i=0 Hasta M-1
+		para j=0 Hasta N-1
+			
+			Si num = original(i,j) Entonces
+				Escribir "Se encuentra en la posicion: [",i,",",j,"]"
+				contador = contador + 1
+			FinSi
+			
+		FinPara
+	FinPara
+	
+	imprimeMatriz(original,M,N)
+	
+	Si contador = 0 Entonces
+		Escribir "No se encontro el numero en ninguna posición."
+	FinSi
+	
+	
+FinAlgoritmo
+
+SubProceso imprimeMatriz(matriz,M,N)
+	Definir i,j Como Entero
+	
+	Para i=0 hasta M-1
+		Para j=0 Hasta N-1
+			Escribir matriz(i,j)," " Sin Saltar
+		FinPara
+		Escribir ""
+	FinPara
+	
+FinSubProceso
+
+	
+
+	

@@ -1,0 +1,26 @@
+Algoritmo Deteccion_de_Letras
+//	Realizar un subproceso que reciba una letra y muestre un mensaje si esa letra esta entre las
+//	letras "M" y "T". Recordar que Pseint le da un valor numérico a cada letra a través del Código
+//	Ascii, lo que nos deja usar operadores relacionales con letras y cadenas.
+// M = alt + 77 y la T = alt + 84	
+	
+	Definir dato Como Caracter
+	
+	Escribir Sin Saltar "Ingrese una letra: "
+	leer dato
+	
+	analisisDato(dato)
+		
+FinAlgoritmo
+
+SubProceso analisisDato(dato1 Por valor) 
+	
+	Si (dato1 >= "M" o dato1 >= "m") Y (dato1 <= "T" o dato1 <= "t") Entonces
+		Escribir "La letra esta entre M y T"
+	SiNo
+		Escribir "La letra NO esta entre M y T"
+	FinSi
+	
+FinSubProceso
+	
+	

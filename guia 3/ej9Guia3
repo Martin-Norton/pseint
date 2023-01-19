@@ -1,0 +1,56 @@
+//Los empleados de una fábrica trabajan en dos turnos: Diurno y Nocturno. Se desea calcular el
+//jornal diario de acuerdo con las siguientes reglas:
+//	a) La tarifa de las horas diurnas es de $ 90
+//	b) La tarifa de las horas nocturnas es de $ 125
+//	c) En caso de ser feriado, la tarifa se incrementa en un 10% si el turno es diurno y en
+//		un 15% si el turno es nocturno.
+//			
+//	El programa debe solicitar la siguiente información al usuario: el nombre del trabajador, el día
+//	de la semana, el turno (diurno o nocturno) y la cantidad de horas trabajadas. Además
+//	debemos preguntarle al usuario si el día de la semana (lunes, martes, miércoles, etc.) era
+//	festivo o no, para poder calcular el jornal diario. Utilice una función para realizar el cálculo.
+Algoritmo sin_titulo
+	definir nombre,dia,turno,fest Como Caracter
+	definir hs Como Entero
+	Escribir "ingrese su nombre"
+	Leer nombre
+	escribir "ingrese el dia"
+	leer dia
+	escribir "ingrese turno (diurno, nocturno)"
+	Leer turno
+	escribir "ingrese hora"
+	leer hs
+	escribir "ingrese si el dia ",dia " es festivo (si o no)"
+	Leer fest
+	turnos(nombre,dia,turno, hs,fest)
+FinAlgoritmo
+
+Funcion retorno<- feriados ( hs,turno )
+	definir retorno Como Entero
+	definir totalDeHs Como Entero
+	si turno = "diurno" Entonces
+		totaldehs=hs* 90
+		retorno = (totaldehs*0.10)+totaldehs
+	SiNo
+		totaldehs=hs* 125
+		retorno = (totaldehs*0.15)+totaldehs
+	FinSi
+Fin Funcion
+Funcion turnos (nombre,dia,turno, hs,fest)
+	Segun turno Hacer
+		"diurno" :
+			si fest= "si" Entonces
+				escribir " su jornal por el dia " dia "es de:" feriados(hs,turno)
+			sino 
+				escribir  " su jornal por el dia " dia "es de:" hs*90
+			FinSi
+		"nocturno" :
+			si fest= "si" Entonces
+				escribir " su jornal por el dia " dia "es de:" feriados(hs,turno)
+			sino 
+				escribir  " su jornal por el dia " dia "es de:" hs*125
+			FinSi
+		De Otro Modo:
+			Escribir "incorrecto"
+	Fin Segun
+FinFuncion

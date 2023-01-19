@@ -1,0 +1,29 @@
+Algoritmo ejercicio_capicua
+	Definir n, invert Como Entero
+	
+	Escribir "Ingrese el número a analizar"
+	Leer n
+	
+	invert = Capicua(n)
+	
+	Si invert = n Entonces
+		Escribir "Es capicúa"
+	SiNo
+		Escribir "NO es capicúa"
+	FinSi
+	
+FinAlgoritmo
+
+Funcion return <- Capicua(num)
+	
+	Definir return Como Entero
+	
+	return = num % 10
+	Mientras num > 9 Hacer
+		num = trunc(num / 10)
+		return = return * 10 + num % 10
+	Fin Mientras
+	
+	
+	
+FinFuncion
